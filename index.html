@@ -3,74 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Groton</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="home.js"></script> 
+    <meta name="description" content="John Groton — Software Engineer. Full stack web/app development and data.">
+    <title>John Groton | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="home.js" defer></script>
 </head>
-<body class="bg-slate-950 text-teal-500">
-    <br>
-    <br>
+<body>
+    <main class="window">
+        <!-- Title bar -->
+        <header class="titlebar">
+            <div class="tabs">
+                <div class="tab active">
+                    <span class="tab-icon">&gt;_</span>
+                    <span class="tab-title">john@portfolio: ~</span>
+                    <span class="tab-close">&#x2715;</span>
+                </div>
+                <span class="tab-new">+</span>
+                <span class="tab-new">&#x2304;</span>
+            </div>
+            <div class="controls" aria-hidden="true">
+                <span>&#x2500;</span>
+                <span>&#x2610;</span>
+                <span class="close">&#x2715;</span>
+            </div>
+        </header>
 
-    <img class="block mx-auto border-4 border-teal-500 rounded-full object-cover hover:border-teal-200 duration-300" src="john.jpg" alt="Me!">
-    <h2 class="flex justify-center  text-3xl">John Groton</h2>
-    <h2 class="flex justify-center  text-3xl">grotonjohn079@gmail.com</h2>
-    <h2 class="flex justify-center  text-3xl"><a class="hover:text-teal-300 transition-colors duration-200" href="https://github.com/JohnnyG1234">Github</a></h2>
-    <br>
-    
-    <section id="about" class="bg-gray-800 max-w-4xl mx-auto shadow-md rounded-lg p-6 mb-6">
-        <h2 class="text-2xl font-bold mb-4">About Me</h2>
-        <p>Hey this is my portfolio website. Thanks for taking a look. I'm a Champlain College Alumni and I have a Bachelor of Science in Computer  Science.</p>
-        <br>
-        <p>I enjoy full stack web/app development, as well as working with data.</p>
-    </section>
-    
-    <div class="flex justify-center">
-        <h2 class="max-w text-3xl font-bold mb-4">Projects</h2>
-      </div>
-    
+        <div class="terminal">
+            <p class="dim">John Groton Portfolio [Version 2.0]<br>Software Engineer &middot; Full Stack &amp; Data</p>
 
-    <section class="bg-gray-800 max-w-4xl mx-auto shadow-md rounded-lg p-6 mb-6">
-        <div class="flex flex-wrap justify-between">
-            <h2 class="text-3xl font-bold mb-4">Catch Up! </h2>
-            <p><a class="text-3xl font-bold text-center hover:text-teal-300 transition-colors duration-200" href="https://github.com/yearlongmason/Catch-Up">Github</a></p>
+            <!-- whoami -->
+            <section>
+                <p class="prompt"><span class="ps">PS C:\Users\john&gt;</span> <span class="cmd" data-type>whoami</span></p>
+                <div class="whoami">
+                    <img src="john.jpg" alt="Photo of John Groton">
+                    <div>
+                        <h1>John Groton</h1>
+                        <p class="yellow">Software Engineer 1 @ Vermont Mutual Insurance Group</p>
+                        <p class="dim">B.S. Computer Science &middot; Champlain College</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- about -->
+            <section id="about">
+                <p class="prompt"><span class="ps">PS C:\Users\john&gt;</span> <span class="cmd">Get-Content</span> <span class="arg">.\about.txt</span></p>
+                <p>Hey, thanks for taking a look at my portfolio. I'm a Champlain College alum with a Bachelor of Science in Computer Science.</p>
+                <p>I enjoy full stack web/app development, as well as working with data.</p>
+                <p>Currently a Software Engineer 1 at Vermont Mutual Insurance Group.</p>
+            </section>
+
+            <!-- projects -->
+            <section id="projects">
+                <p class="prompt"><span class="ps">PS C:\Users\john&gt;</span> <span class="cmd">Get-ChildItem</span> <span class="arg">.\projects</span></p>
+
+                <div class="scroll">
+                    <table class="listing">
+                        <thead>
+                            <tr><th>Mode</th><th>Stack</th><th>Name</th></tr>
+                            <tr class="rule"><td>----</td><td>-----</td><td>----</td></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>d----</td><td>Django, MySQL, Discord.py</td><td><a href="#catch-up">catch-up</a></td></tr>
+                            <tr><td>d----</td><td>Web, team project</td><td><a href="#cs-club">cs-club-website</a></td></tr>
+                            <tr><td>d----</td><td>Python, sockets, CI</td><td><a href="#chat-room">python-chat-room</a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <article class="project" id="catch-up">
+                    <div class="project-head">
+                        <h2>Catch Up!</h2>
+                        <a href="https://github.com/yearlongmason/Catch-Up" target="_blank" rel="noopener">[ github &#x2197; ]</a>
+                    </div>
+                    <img src="catchup.jpg" alt="Screenshot of the Catch Up! web app">
+                    <p>A quote management system I developed with Mason Lee. We built it because we wanted a better way to keep track of the funny things our friends said.</p>
+                    <p>The project spans several layers: a Discord bot, an API, a database, and a web app, with single sign-on so users can log in with their Discord accounts.</p>
+                    <ul class="tags"><li>Django</li><li>MySQL</li><li>Discord.py</li><li>OAuth SSO</li></ul>
+                </article>
+
+                <article class="project" id="cs-club">
+                    <div class="project-head">
+                        <h2>Computer Science Club Website</h2>
+                        <a href="https://github.com/RyanBuck182/ComputerScienceClubWebsite" target="_blank" rel="noopener">[ github &#x2197; ]</a>
+                    </div>
+                    <img src="ComputerSciClub.jpg" alt="Screenshot of the Champlain College Computer Science Club website">
+                    <p>The official Champlain College Computer Science Club website. I worked alongside other club members to build features and fix bugs.</p>
+                    <ul class="tags"><li>Web</li><li>Collaboration</li></ul>
+                </article>
+
+                <article class="project" id="chat-room">
+                    <div class="project-head">
+                        <h2>Python Chat Room</h2>
+                        <a href="https://github.com/JohnnyG1234/Python-ChatRoom" target="_blank" rel="noopener">[ github &#x2197; ]</a>
+                    </div>
+                    <p>A simple server and client for a chat room built on Python sockets. Includes unit tests, with automated test runs on every commit to main via GitHub Actions.</p>
+                    <ul class="tags"><li>Python</li><li>Sockets</li><li>Unit Testing</li><li>GitHub Actions</li></ul>
+                </article>
+            </section>
+
+            <!-- contact -->
+            <section id="contact">
+                <p class="prompt"><span class="ps">PS C:\Users\john&gt;</span> <span class="cmd">Get-Contact</span> <span class="arg">-All</span></p>
+                <dl class="contact">
+                    <dt>Email</dt><dd><a href="mailto:grotonjohn079@gmail.com">grotonjohn079@gmail.com</a></dd>
+                    <dt>GitHub</dt><dd><a href="https://github.com/JohnnyG1234" target="_blank" rel="noopener">github.com/JohnnyG1234</a></dd>
+                    <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/johngroton/" target="_blank" rel="noopener">linkedin.com/in/johngroton</a></dd>
+                </dl>
+            </section>
+
+            <p class="prompt"><span class="ps">PS C:\Users\john&gt;</span> <span class="cursor"></span></p>
         </div>
-        <img src="catchup.jpg" alt="catchUpScreenshot">
-        
-        <br>
-        <p>
-            Catch-Up is a quote management system that I developed with Mason Lee.
-            We made Catch-Up as we wanted a better way to manage funny things our friends said that we wanted to remember.
-            There are several layers of software in the project including a Discord bot, an API, a database, and a web app.
-        </p>
-        <br>
-        <p>
-            It was made with Django, MySQL, as well as Discord.py. Additionally it has a single sign-on authentication system to allow users to login with their Discord accounts.
-        </p>
-    </section>
-
-        <section class="bg-gray-800 max-w-4xl mx-auto shadow-md rounded-lg p-6 mb-6">
-        <div class="flex flex-wrap justify-between">
-            <h2 class="text-3xl font-bold mb-4">Computer Science Club website </h2>
-            <p><a class="text-3xl font-bold text-center hover:text-teal-300 transition-colors duration-200" href="https://github.com/RyanBuck182/ComputerScienceClubWebsite">Github</a></p>
-        </div>
-        <img src="ComputerSciClub.jpg" alt="catchUpScreenshot">
-        
-        <br>
-        <p>
-            I helped make the official Champlain College Computer Science Club website.
-            I worked with lots of other members of the club to make the site and fix bugs
-        </p>
-    </section>
-
-
-    <section class="bg-gray-800 max-w-4xl mx-auto shadow-md rounded-lg p-6 mb-6">
-        <div class="flex flex-wrap justify-between">
-            <h2 class="text-3xl font-bold mb-4"> Python Chat Room </h2>
-            <p><a class="text-3xl font-bold text-center hover:text-teal-300 transition-colors duration-200" href="https://github.com/JohnnyG1234/Python-ChatRoom">Github</a></p>
-        </div>
-        <br>
-        <p>A simple server and client to make a chat room using sockets in Python. Includes unit tests, as well as a support to run automated test on commit to main using Github workflows</p>
-    </section>
-    
+    </main>
 </body>
 </html>
